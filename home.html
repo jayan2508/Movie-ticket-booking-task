@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <title>INOX DR World</title>
+</head> 
+
+<body>
+    <nav>
+        <div class="search-nav">
+            <a href=""><span>Rajhans</span>Cinema</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search..." oninput="searchMovies()">
+            </div>
+        </div>
+        <div class="nav-button">
+            <div>
+                <button class="btn btn-danger ml-auto" onclick="openSignInModal()">Sign In</button>
+            </div>
+            <div>
+                <div class="off-canvas-toggle" onclick="toggleOffCanvas()">
+                    <img src="img/menupng.png" alt="" class="menu">
+                    <img src="img/close.png" alt="" class="close" style="display:none;">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="offCanvasMenu" class="off-canvas-menu">
+        <!-- Add your off-canvas menu content here -->
+        <ul>
+            <li>
+                <img src="img/notification.png" alt=""> Notifications
+                <img src="img/right-arrow.png" alt="" class="right-arrow-noti">
+            </li>
+            <li>
+                <img src="img/gift-box.png" alt=""> Rewards <img src="img/right-arrow.png" alt=""
+                    class="right-arrow-gift">
+            </li>
+            <li>
+                <img src="img/messenger.png" alt=""> Help & Support
+                <img src="img/right-arrow.png" alt="" class="right-arrow-mess">
+            </li>
+        </ul>
+    </div>
+
+    <div class="filter-container">
+        <div class="dropdown-main-container ms-auto" >
+            <div class="dropdown-container " id="languageContainer">
+                <select id="languageFilter">
+                    <option value="" hidden>Language</option>
+                    <option value="all">All languages</option>
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="gujarati">Gujarati</option>
+                    <option value="tamil">Tamil</option>
+                </select>
+                <img src="img/dropdown.png" alt="">
+            </div>
+
+            <div class="dropdown-container" id="genresContainer">
+                <select id="genreFilter">
+                    <option value="" hidden>Genres</option>
+                    <option value="all">All Genres</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="super hero">Super hero</option>
+                    <option value="suspense">Suspense</option>
+                    <option value="crime film">Crime film</option>
+                    <option value="monster">Monster</option>
+                    <option value="science fiction">Science fiction</option>
+                    <option value="animation">Animation</option>
+                    <option value="romance">Romance</option>
+                    <option value="documentary">Documentary</option>
+                    <option value="gangster">Gangster</option>
+                </select>
+                <img src="img/dropdown.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cards">
+        <a href="index.html?Jawan" class="card">
+            <img src="img/jawan.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Jawan</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>Atlee</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>Shah Rukh Khan,
+                        Nayanthara,
+                        Vijay Sethupathi</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>Ruben</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Drama, Thriller</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Gadar2" class="card">
+            <img src="img/Gadar2.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Gadar 2</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>Anil Sharma</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>Sunny Deol,
+                        Ameesha Patel,
+                        Utkarsh Sharma,
+                        Gaurav Chopra,
+                        Manish Wadhwa,
+                        Simrat Kaur</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> Ashfaque Makrani,
+                        Sanjay Sankla</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Drama, Thriller</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Jailer" class="card">
+            <img src="img/jailer.webp" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Jailer</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>Nelson Dilipkumar</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p> Rajinikanth,
+                        Vinayakan,
+                        Ramya Krishnan,
+                        Vasanth Ravi</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> R. Nirmal</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi , Tamil</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Drama, Thriller</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Antman" class="card">
+            <img src="img/ant man.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Ant Man</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Peyton Reed</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p> Paul Rudd,
+                        Evangeline Lilly,
+                        Corey Stoll,
+                        Bobby Cannavale</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>Dan Lebental,
+                        Colby Parker</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi , English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Comedy, Thriller</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Avengers" class="card">
+            <img src="img/avengers.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">The Avengers</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>Joss Whedon</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p> Robert Downey Jr.,
+                        Chris Evans,
+                        Mark Ruffalo,
+                        Chris Hemsworth</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> Jeffrey Ford
+                        Lisa Lassek</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi , English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Comedy, Thriller, Super Hero</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?3Ekka" class="card">
+            <img src="img/ekka-1.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">3 Ekka</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Rajesh Sharma</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>
+                        Malhar Thakar,
+                        Yash Soni,
+                        Mitra Gadhavi,
+                        Kinjal Rajpriya</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>Nirav Panchal</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Gujarati</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Comedy, Drama</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Tiger3" class="card">
+            <img src="img/Tiger-3.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Tiger 3</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>
+                        Maneesh Sharma</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>Salman Khan,
+                        Katrina Kaif,
+                        Emraan Hashmi</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> Rameshwar S. Bhagat</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Thriller</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Fukrey3" class="card">
+            <img src="img/Fukrey-3.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Fukrey 3</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Mrighdeep Singh Lamba</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>
+                        Pulkit Samrat,
+                        Varun Sharma,
+                        Manjot Singh,
+                        Richa Chadha,
+                        Pankaj Tripathi</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> Manan Ashwin Mehta</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Comedy</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Eternals" class="card">
+            <img src="img/eternals-2.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Eternals</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>Chloé Zhao</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>Gemma Chan,
+                        Richard Madden,
+                        Kumail Nanjiani</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>Craig Wood,
+                        Dylan Tichenor</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Suspense, Thriller, Super Hero</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?JohnWick" class="card">
+            <img src="img/John Wick.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">John Wick</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Derek Kolstad</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>No</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>No</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi , English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Drama, Thriller, Super Hero, Crime film</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?JurassicWorld" class="card">
+            <img src="img/jurassic world.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Jurassic World Dominion</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Colin Trevorrow</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>
+                        Chris Pratt,
+                        Laura Dern,
+                        Jeff Goldblum</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> Mark Sanger</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi , English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Monster, Thriller, Super Hero, Science fiction</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Khichdi2" class="card">
+            <img src="img/Khichdi-2.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Khichdi-2</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>Aatish Kapadia</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>
+                        Supriya Pathak Kapur,
+                        Rajeev Mehta,
+                        Anang Desai,
+                        Vandana Pathak</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>Aajay K.</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Drama, Comedy</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?TotalDhamaal" class="card">
+            <img src="img/total-dhamaal.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Total Dhamaal</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>Indra Kumar</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>Ajay Devgn,
+                        Anil Kapoor,
+                        Madhuri Dixit,
+                        Riteish Deshmukh</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>
+                        Dharmendra Sharma</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Comedy</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?MoonKnight" class="card">
+            <img src="img/moon knight.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Moon Knight</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Jeremy Slater</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>
+                        Oscar Isaac,
+                        May Calamawy,
+                        Karim El Hakim,
+                        F. Murray Abraham</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>
+                        Cedric Nairn-Smith,
+                        Joan Sobel,
+                        Ahmed Hafez</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Drama, Thriller, Super Hero, Horror</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Spiderman" class="card">
+            <img src="img/spiderman.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Spider-man no way home</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Jon Watts</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>
+                        Tom Holland,
+                        Zendaya</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>
+                        Jeffrey Ford
+                        Leigh Folsom Boyd</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi , English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Comedy, Thriller, Super Hero, Animation, Romance</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?TheNun2" class="card">
+            <img src="img/the-nun-2.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">The Nun 2</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Michael Chaves</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>
+                        Taissa Farmiga,
+                        Jonas Bloquet,
+                        Storm Reid,
+                        Anna Popplewell</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> Gregory Plotkin</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi , English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Horror, Comedy, Thriller, Suspense</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Leo" class="card">
+            <img src="img/leo-2.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Leo</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Lokesh Kanagaraj</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>Vijay,
+                        Sanjay Dutt,
+                        Arjun,
+                        Trisha</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>Philomin Raj</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Hindi , Tamil</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Drama,Action Thriller, Suspense, Gangster, Documentary</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?ThorLoveOfThunder" class="card">
+            <img src="img/thor love of thunder.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Thor Love and Thunder</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Taika Waititi</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>Chris Hemsworth,
+                        Christian Bale,
+                        Tessa Thompson,
+                        Jaimie Alexander</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p>
+                        Matthew Schmidt,
+                        Peter S. Elliot</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Comedy, Romance, Super Hero, Drama</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?Topgun" class="card">
+            <img src="img/topgun.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Topgun Maverick</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p>Joseph Kosinski</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>Tom Cruise,
+                        Miles Teller,
+                        Jennifer Connelly,
+                        Jon Hamm</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> Eddie Hamilton</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">English</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Action, Comedy, Thriller, Romance, Documentary</p>
+                </div>
+            </div>
+        </a>
+        <a href="index.html?GulaamChor" class="card">
+            <img src="img/gulaam.jpg" alt="">
+            <div class="card-info">
+                <div class="cont">
+                    <p class="movie">Gulaam Chor</p>
+                    <h6>
+                        <li>Directed by</li>
+                    </h6>
+                    <p> Viral Shah</p>
+                    <h6>
+                        <li>Starring</li>
+                    </h6>
+                    <p>
+                        Malhar Thakar,
+                        Vandana Pathak,
+                        Kamlesh Oza</p>
+                    <h6>
+                        <li>Edited by</li>
+                    </h6>
+                    <p> No</p>
+                    <h6>
+                        <li>Language</li>
+                    </h6>
+                    <p id="language">Gujarati</p>
+                    <h6>
+                        <li>Genres</li>
+                    </h6>
+                    <p id="genres">Comedy, Drama, Suspense</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div id="noFoundImage" class="not-found-img" style="display: none; text-align: center;">
+        <img src="img/dog-2.jpg" alt="">
+    </div>
+    <div id="noMatchMessage" style="display: none; text-align: center; color: grey; font-size: 35px; margin-top: 20px;">
+        This movie not available!
+    </div>
+
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+            <p class="text-center text-muted">© 2022 Company, Inc</p>
+        </footer>
+    </div>
+
+</body>
+<script src="JS/home.js"></script>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
